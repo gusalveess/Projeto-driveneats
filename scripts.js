@@ -38,7 +38,18 @@ const prato = document.querySelector(".containerprato .selectOne .nomeprato").te
 const bebida = document.querySelector(".containerbebida .selectTwo .nomebebida").textContent
 const sobremesa = document.querySelector(".containersobremesa .selectThree .nomesobremesa").textContent
 
-let valorprato = document.querySelector(".containerprato .selectOne .valorcomida");
-let valorbebida = document.querySelector(".containerbebida .selectTwo .value");
-let valorsobremesa =document.querySelector(".containersobremesa .selectThree .value");
+let valorprato = document.querySelector(".containerprato .selectOne .valorcomida").textContent
+let valorbebida = document.querySelector(".containerbebida .selectTwo .valorbebida").textContent
+let valorsobremesa =document.querySelector(".containersobremesa .selectThree .valorsobremesa").textContent
+
+valorprato = Number(valorprato.replace("," , "." ));
+valorbebida = Number(valorbebida.replace("," , "." ));
+valorsobremesa = Number(valorsobremesa.replace("," , "." ));
+
+let precogeral = (valorprato + valorbebida + valorsobremesa).toFixed(2);
+let MensagemUm ="https://wa.me/5521983815743?text"
+let MensagemDois = `Olá, gostaria de fazer o pedido: \n- Prato: ${prato} \n- Bebida: ${bebida} \n- Sobremesa: ${sobremesa} \n- Total: ${precogeral}`;
+console.log(MensagemDois)
+let EUC = encodeURIComponent(MensagemDois)
+window.open(MensagemUm + EUC, "_blank")
 }
