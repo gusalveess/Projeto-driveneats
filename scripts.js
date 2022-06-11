@@ -38,7 +38,7 @@ const prato = document.querySelector(".containerprato .selectOne .nomeprato").te
 const bebida = document.querySelector(".containerbebida .selectTwo .nomebebida").textContent
 const sobremesa = document.querySelector(".containersobremesa .selectThree .nomesobremesa").textContent
 
-let valorprato = document.querySelector(".containerprato .selectOne .value");
+let valorprato = document.querySelector(".containerprato .selectOne .valorcomida");
 let valorbebida = document.querySelector(".containerbebida .selectTwo .value");
 let valorsobremesa =document.querySelector(".containersobremesa .selectThree .value");
 }
