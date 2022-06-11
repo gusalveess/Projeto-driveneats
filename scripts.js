@@ -1,101 +1,44 @@
-function choiceyin (){
-    document.getElementById("yin").style.border= "5px #32B72F solid";
-    document.getElementById("yang").style.border= "5px white solid";
-    document.getElementById("yin-yang").style.border= "5px white solid";
-
-    document.getElementById("icon-one").style.display= "block"
-    document.getElementById("icon-two").style.display= "none"
-    document.getElementById("icon-three").style.display= "none"
+function selecionarComida(elemento) {
+    const botaocliclado = document.querySelector(".selectOne")
+    if (botaocliclado !== null) {
+        botaocliclado.classList.remove("selectOne");
+    }
+    elemento.classList.add("selectOne");
+    verificar();
 }
 
-function choiceyang (){
-    document.getElementById("yang").style.border= "5px #32B72F solid";
-    document.getElementById("yin").style.border= "5px white solid";
-    document.getElementById("yin-yang").style.border= "5px white solid";
-
-    document.getElementById("icon-one").style.display= "none"
-    document.getElementById("icon-two").style.display= "block"
-    document.getElementById("icon-three").style.display= "none"
-
+function selecionarBebida(elemento) {
+    const botaocliclado = document.querySelector(".selectTwo")
+    if (botaocliclado !== null) {
+        botaocliclado.classList.remove("selectTwo");
+    }
+    elemento.classList.add("selectTwo");
+    verificar();
 }
 
-function choiceyinyang (){
-    document.getElementById("yin-yang").style.border= "5px #32B72F solid";
-    document.getElementById("yin").style.border= "5px white solid";
-    document.getElementById("yang").style.border= "5px white solid";
+function selecionarSobremesa(elemento) {
+    const botaocliclado = document.querySelector(".selectThree")
+    if (botaocliclado !== null) {
+        botaocliclado.classList.remove("selectThree");
+    }
+    elemento.classList.add("selectThree");
+    verificar();
+}
 
-    document.getElementById("icon-one").style.display= "none"
-    document.getElementById("icon-two").style.display= "none"
-    document.getElementById("icon-three").style.display= "block"
+function verificar() {
+    const fechar = document.querySelector(".conclusao-inc");
+    if (selecionarComida && selecionarBebida && selecionarSobremesa) {
+        fechar.innerHTML= "Fechar pedido"
+        fechar.classList.add("fecharpedido")
+    }
+}
 
-}   
+function Mandarzap (){
+const prato = document.querySelector(".containerprato .selectOne .nomeprato").textContent
+const bebida = document.querySelector(".containerbebida .selectTwo .nomebebida").textContent
+const sobremesa = document.querySelector(".containersobremesa .selectThree .nomesobremesa").textContent
 
-function choiceagua (){
-    document.getElementById("agua").style.border= "5px #32B72F solid";
-    document.getElementById("coca").style.border= "5px white solid";
-    document.getElementById("cerveja").style.border= "5px white solid";
-
-    document.getElementById("icon-four").style.display= "block"
-    document.getElementById("icon-five").style.display= "none"
-    document.getElementById("icon-six").style.display= "none"
-
-}   
-
-
-function choicecoca (){
-    document.getElementById("agua").style.border= "5px white solid";
-    document.getElementById("coca").style.border= "5px #32B72F solid";
-    document.getElementById("cerveja").style.border= "5px white solid";
-
-    document.getElementById("icon-four").style.display= "none"
-    document.getElementById("icon-five").style.display= "block"
-    document.getElementById("icon-six").style.display= "none"
-
-}   
-
-
-function choicecerveja (){
-    document.getElementById("agua").style.border= "5px white solid";
-    document.getElementById("coca").style.border= "5px white solid";
-    document.getElementById("cerveja").style.border= "5px #32B72F solid";
-
-    document.getElementById("icon-four").style.display= "none"
-    document.getElementById("icon-five").style.display= "none"
-    document.getElementById("icon-six").style.display= "block"
-
-}   
-
-function choicebolo (){
-    document.getElementById("bolo").style.border= "5px #32B72F solid";
-    document.getElementById("pudim").style.border= "5px white solid";
-    document.getElementById("mousse").style.border= "5px white solid";
-
-    document.getElementById("icon-seven").style.display= "block"
-    document.getElementById("icon-eight").style.display= "none"
-    document.getElementById("icon-nine").style.display= "none"
-
-}   
-
-
-function choicepudim (){
-    document.getElementById("bolo").style.border= "5px white solid";
-    document.getElementById("pudim").style.border= "5px #32B72F solid";
-    document.getElementById("mousse").style.border= "5px white solid";
-
-    document.getElementById("icon-seven").style.display= "none"
-    document.getElementById("icon-eight").style.display= "block"
-    document.getElementById("icon-nine").style.display= "none"
-
-}   
-
-
-function choicemousse(){
-    document.getElementById("bolo").style.border= "5px white solid";
-    document.getElementById("pudim").style.border= "5px white solid";
-    document.getElementById("mousse").style.border= "5px #32B72F solid";
-
-    document.getElementById("icon-seven").style.display= "none"
-    document.getElementById("icon-eight").style.display= "none"
-    document.getElementById("icon-nine").style.display= "block"
-
-}   
+let valorprato = document.querySelector(".containerprato .selectOne .value");
+let valorbebida = document.querySelector(".containerbebida .selectTwo .value");
+let valorsobremesa =document.querySelector(".containersobremesa .selectThree .value");
+}

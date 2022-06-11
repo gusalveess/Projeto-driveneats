@@ -136,11 +136,22 @@ border-radius: 9px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.conclusao-inc p {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     color: #FFFFFF;
     font-weight: 400;
+}
+
+/* javascript */
+.selectOne  {
+    border: 5px #32B72F solid;
+}
+.selectTwo {
+    border: 5px #32B72F solid;
+}
+.selectThree  {
+    border: 5px #32B72F solid;
+}
+.fecharpedido {
+    background-color: #32B72F;
 }
