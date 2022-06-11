@@ -47,9 +47,8 @@ valorbebida = Number(valorbebida.replace("," , "." ));
 valorsobremesa = Number(valorsobremesa.replace("," , "." ));
 
 let precogeral = (valorprato + valorbebida + valorsobremesa).toFixed(2);
-let MensagemUm ="https://wa.me/5521983815743?text"
+let MensagemUm ="https://wa.me/5521983815743?text="
 let MensagemDois = `Olá, gostaria de fazer o pedido: \n- Prato: ${prato} \n- Bebida: ${bebida} \n- Sobremesa: ${sobremesa} \n- Total: ${precogeral}`;
-console.log(MensagemDois)
 let EUC = encodeURIComponent(MensagemDois)
 window.open(MensagemUm + EUC, "_blank")
 }
