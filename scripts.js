@@ -38,17 +38,17 @@ const prato = document.querySelector(".containerprato .selectOne .nomeprato").te
 const bebida = document.querySelector(".containerbebida .selectTwo .nomebebida").textContent
 const sobremesa = document.querySelector(".containersobremesa .selectThree .nomesobremesa").textContent
 
-let valorprato = document.querySelector(".containerprato .selectOne .valorcomida").textContent
-let valorbebida = document.querySelector(".containerbebida .selectTwo .valorbebida").textContent
-let valorsobremesa =document.querySelector(".containersobremesa .selectThree .valorsobremesa").textContent
+let valorprato = document.querySelector(".containerprato .selectOne span").textContent;
+let valorbebida = document.querySelector(".containerbebida .selectTwo span").textContent;
+let valorsobremesa =document.querySelector(".containersobremesa .selectThree span").textContent;
 
 valorprato = Number(valorprato.replace("," , "." ));
 valorbebida = Number(valorbebida.replace("," , "." ));
 valorsobremesa = Number(valorsobremesa.replace("," , "." ));
 
-let precogeral = (valorprato + valorbebida + valorsobremesa).toFixed(2);
+let precoGeral = (valorprato + valorbebida + valorsobremesa).toFixed(2);
 let MensagemUm ="https://wa.me/5521983815743?text="
-let MensagemDois = `Olá, gostaria de fazer o pedido: \n- Prato: ${prato} \n- Bebida: ${bebida} \n- Sobremesa: ${sobremesa} \n- Total: ${precogeral}`;
-let EUC = encodeURIComponent(MensagemDois)
-window.open(MensagemUm + EUC, "_blank")
+let MensagemDois = `Olá, gostaria de fazer o pedido: \n- Prato: ${prato} \n- Bebida: ${bebida} \n- Sobremesa: ${sobremesa} \n- Total: R$ ${precoGeral}`;
+let EUC = encodeURIComponent(MensagemDois);
+window.open(MensagemUm + EUC, "_blank");
 }
