@@ -143,8 +143,14 @@ border-radius: 9px;
 }
 
 /* javascript */
+ion-icon {
+    display:none;
+}
 .selectOne  {
     border: 5px #32B72F solid;
+}
+.selectOne ion-icon{
+    display:block;
 }
 .selectTwo {
     border: 5px #32B72F solid;
